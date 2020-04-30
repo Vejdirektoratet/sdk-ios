@@ -17,6 +17,7 @@ The easiest way of getting official and up to date traffic data for the geograph
 - [x] Condition of road segments in winter
 - [x] Request data from within geographical bounding box
 - [x] Request single entity by `tag`
+- [x] Live stream of events (i.e. new, removed and updated entities)
 
 ## Installation
 
@@ -153,6 +154,7 @@ VejdirektoratetSDK is brought to you by [The Danish Road Directorate](https://ww
 This SDK is using the following libraries:
  - [Alamofire](https://github.com/Alamofire/Alamofire) - A HTTP networking library for Swift.
  - [Hippolyte](https://github.com/JanGorman/Hippolyte) - A HTTP stubbing library for Swift.
+ - [EventSource](https://github.com/Inaka/EventSource/) - A simple Swift client library for the Server Sent Events (SSE).
 
 Project [contributors](https://github.com/Vejdirektoratet/sdk-ios/graphs/contributors).
 

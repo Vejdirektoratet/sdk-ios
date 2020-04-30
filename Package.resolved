@@ -6,8 +6,17 @@
         "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
         "state": {
           "branch": null,
-          "revision": "11928850d7273a8cd41bb766f2fc93b4d724b79b",
-          "version": "5.0.4"
+          "revision": "2cbf59935fbb1f26e352ce4db53f1cf9408d5313",
+          "version": "5.0.0-rc.3"
+        }
+      },
+      {
+        "package": "EventSource",
+        "repositoryURL": "https://github.com/Inaka/EventSource.git",
+        "state": {
+          "branch": "master",
+          "revision": "78934b361891c7d0fa3d399d128e959f0c94d267",
+          "version": null
         }
       },
       {

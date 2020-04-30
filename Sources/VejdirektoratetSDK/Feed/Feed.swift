@@ -25,6 +25,11 @@ public class Feed {
         VejdirektoratetSDK.ViewType.Map: "https://data.vd-nap.dk/api/v2/map/entity",
     ]
 
+    internal static let baseUpdatesUrl = [
+        VejdirektoratetSDK.ViewType.List: "https://data.vd-nap.dk/api/v2/list/updates",
+        VejdirektoratetSDK.ViewType.Map: "https://data.vd-nap.dk/api/v2/map/updates",
+    ]
+
     internal func request(entityTypes: [VejdirektoratetSDK.EntityType], region: MKCoordinateRegion?, zoom: Int? = nil, viewType: VejdirektoratetSDK.ViewType = VejdirektoratetSDK.ViewType.List, apiKey: String, completion: @escaping (HTTP.Result) -> Void) -> HTTP.Request {
         let url = self.urlWithParameters(baseUrl: Feed.baseSnapshotUrl[viewType]!, entityTypes: entityTypes, region: region, zoom: zoom, viewType: viewType, apiKey: apiKey)
         return HTTP().request(url: url, viewType: viewType) { (result) in
@@ -37,6 +42,11 @@ public class Feed {
         return HTTP().request(url: url, viewType: viewType) { (result) in
             completion(result)
         }
+    }
+
+    internal func sync(entityTypes: [VejdirektoratetSDK.EntityType], region: MKCoordinateRegion?, zoom: Int? = nil, viewType: VejdirektoratetSDK.ViewType = VejdirektoratetSDK.ViewType.List, apiKey: String, callback: @escaping (SSE.EntityChange) -> Void) -> SSE.Request {
+        let url = self.urlWithParameters(baseUrl: Feed.baseUpdatesUrl[viewType]!, entityTypes: entityTypes, region: region, zoom: zoom, viewType: viewType, apiKey: apiKey)
+        return SSE().request(url: url, viewType: viewType, callback: callback)
     }
 
     internal static func mapEntities(entities: [Any], viewType: VejdirektoratetSDK.ViewType) -> [Entity] {

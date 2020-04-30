@@ -67,4 +67,20 @@ public class VejdirektoratetSDK {
     public static func requestEntity(tag: String, viewType: ViewType, apiKey: String, completion: @escaping (HTTP.Result) -> Void) -> HTTP.Request {
         Feed().requestEntity(tag: tag, viewType: viewType, apiKey: apiKey, completion: completion)
     }
+
+    /**
+     * Method to request continous updates on entities
+     *
+     * @param entityTypes the desired EntityType's to be returned in the callback
+     * @param region the region from which to get entities (optional)
+     * @param zoom Google-like zoom level to determine the detail level (optional)
+     * @param viewType the desired ViewType for which to display the entities
+     * @param apiKey the API key should be acquired from https://nap.vd.dk/
+     * @param callback the callback method which will receive the entities in form of a SSE.EntityChange
+     * @return SSE.Request returns a cancellable request
+     */
+    @discardableResult
+    public static func sync(entityTypes: [EntityType], region: MKCoordinateRegion? = nil, zoom: Int? = nil, viewType: ViewType, apiKey: String, callback: @escaping (SSE.EntityChange) -> Void) -> SSE.Request {
+        Feed().sync(entityTypes: entityTypes, region: region, zoom: zoom, viewType: viewType, apiKey: apiKey, callback: callback)
+    }
 }

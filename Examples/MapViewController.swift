@@ -19,6 +19,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
 
     var currentListRequest: HTTP.Request? = nil
     var currentMapRequest: HTTP.Request? = nil
+    var currentSyncRequest: SSE.Request? = nil
 
     var updateMapTimer: Timer? = nil
     
@@ -37,6 +38,29 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
     override func viewDidAppear(_ animated: Bool) {
         self.updateMapData()
         self.updateTableView()
+
+        self.currentSyncRequest = VejdirektoratetSDK.sync(entityTypes: [.Traffic, .RoadWork, .TrafficDensity],
+                                                          region: self.mapView.region,
+                                                          viewType: VejdirektoratetSDK.ViewType.Map,
+                                                          apiKey: self.apiKey) { entityChange in
+                                                            switch entityChange {
+                                                            case .entitiesCleared:
+                                                                debugPrint("Entities cleared!")
+                                                                break
+                                                            case .entitiesAdded(let entities):
+                                                                debugPrint("Entities added!")
+                                                                debugPrint(entities)
+                                                                break
+                                                            case .entitiesUpdated(let entities):
+                                                                debugPrint("Entities updated!")
+                                                                debugPrint(entities)
+                                                                break
+                                                            case .entitiesRemoved(let tags):
+                                                                debugPrint("Entities deleted!")
+                                                                debugPrint(tags)
+                                                                break
+                                                            }
+        }
     }
     
     // MARK: Feed
