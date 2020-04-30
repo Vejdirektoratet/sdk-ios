@@ -1,0 +1,38 @@
+#
+# Be sure to run `pod lib lint VejdirektoratetSDK.podspec' to ensure this is a
+# valid spec before submitting.
+#
+# Any lines starting with a # are optional, but their use is encouraged
+# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
+#
+
+Pod::Spec.new do |s|
+  s.name             = 'VejdirektoratetSDK'
+  s.version          = '1.0.0'
+  s.summary          = 'Swift library for retrieving traffic information from Vejdirektoratet'
+
+# This description is used to generate tags and improve search results.
+#   * Think: What does it do? Why did you write it? What is the focus?
+#   * Try to keep it short, snappy and to the point.
+#   * Write the description between the DESC delimiters below.
+#   * Finally, don't worry about the indent, CocoaPods strips it!
+
+  s.description      = 'VejdirektoratetSDK is a Swift library for retrieving traffic information from Vejdirektoratet.'
+
+  s.homepage         = 'https://github.com/Vejdirektoratet/sdk-ios'
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.author           = { 'Vejdirektoratet' => 'crvh@vd.dk' }
+  s.source           = { :git => 'https://github.com/Vejdirektoratet/sdk-ios.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/vejdirektoratet'
+
+  s.swift_version = '5.0'
+  s.ios.deployment_target = '10.0'
+
+  s.source_files = 'Sources/**/*'
+  
+  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.frameworks = 'UIKit', 'MapKit'
+  s.dependency 'Alamofire', '~> 5.0.0-rc.3'
+  s.dependency 'Hippolyte', '~> 1.1.0'
+  s.dependency 'EventSource'
+end

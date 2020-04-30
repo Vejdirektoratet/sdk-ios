@@ -1,0 +1,15 @@
+language: swift
+os: osx
+
+git:
+  depth: 1
+
+jobs:
+  include:
+  - stage: SDK test
+    os: osx
+    osx_image: xcode11.3
+    language: swift
+    script:
+    - swift package update
+    - swift test

@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
+        "state": {
+          "branch": null,
+          "revision": "11928850d7273a8cd41bb766f2fc93b4d724b79b",
+          "version": "5.0.4"
+        }
+      },
+      {
+        "package": "Hippolyte",
+        "repositoryURL": "https://github.com/JanGorman/Hippolyte.git",
+        "state": {
+          "branch": null,
+          "revision": "215191ff9e13160333157900d7954ef62054d64e",
+          "version": "1.1.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
