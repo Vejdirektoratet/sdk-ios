@@ -30,7 +30,7 @@ import PackageDescription
 
 let package = Package(
 dependencies: [
-	package(url: "https://github.com/Vejdirektoratet/sdk-ios.git", "1.0.1")
+	package(url: "https://github.com/Vejdirektoratet/sdk-ios.git", "1.0.2")
 ])
 ```
 
