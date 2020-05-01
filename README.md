@@ -55,7 +55,7 @@ Be sure to open the generated workspace in Xcode.
 
 Add the following to your `Cartfile`:
 ```ruby
-github "Vejdirektoratet/ios-sdk"
+github "Vejdirektoratet/sdk-ios"
 ```
 
 Then run
