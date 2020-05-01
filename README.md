@@ -51,21 +51,6 @@ $ pod install
 
 Be sure to open the generated workspace in Xcode.
 
-### Carthage
-
-Add the following to your `Cartfile`:
-```ruby
-github "Vejdirektoratet/sdk-ios"
-```
-
-Then run
-
-```bash
-carthage update
-```
-
-Add the VejdirektoratetSDK.framework to the `Link Binary with Libraries`.
-
 ## Getting started
 
 ### Configuration
