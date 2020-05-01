@@ -3,7 +3,6 @@
 The easiest way of getting official and up to date traffic data for the geographical region of Denmark.
 
 [![Build Status](https://travis-ci.com/Vejdirektoratet/sdk-ios.svg?branch=master)](https://travis-ci.com/Vejdirektoratet/sdk-ios)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/VejdirektoratetSDK)](https://img.shields.io/cocoapods/v/VejdirektoratetSDK)
 [![Platform](https://img.shields.io/cocoapods/p/VejdirektoratetSDK?style=flat)](https://img.shields.io/cocoapods/v/VejdirektoratetSDK)
 [![License](https://img.shields.io/cocoapods/l/BadgeSwift.svg?style=flat)](/LICENSE)
