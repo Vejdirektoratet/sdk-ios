@@ -34,4 +34,9 @@ Carthage/Build/
 
 .build/
 .swiftpm
+.DS_Store
+DerivedData/
+build/
+*.pbxuser
+!default.pbxuser
 
