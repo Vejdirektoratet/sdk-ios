@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'VejdirektoratetSDK'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'Swift library for retrieving traffic information from Vejdirektoratet'
 
 # This description is used to generate tags and improve search results.
@@ -34,5 +34,4 @@ Pod::Spec.new do |s|
   s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'Alamofire', '~> 5.0.0-rc.3'
   s.dependency 'Hippolyte', '~> 1.1.0'
-  s.dependency 'EventSource'
 end
