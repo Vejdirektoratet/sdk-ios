@@ -110,9 +110,9 @@ The `region` parameter is a bounding box of type `MKCoordinateRegion` describing
 Omitting this parameter will return data for the entire region of Denmark.
 
 #### zoom (optional)
-The Int parameter `zoom` is a Google-maps style zoom level describing in which resolution the geometrical information should be returned.
+The parameter `zoom` is a Google-maps style zoom level describing in which resolution the geometrical information should be returned.
 
-**NOTE:** This parameter is only relevant for `viewType = ViewType.Map`
+**NOTE:** This parameter is only relevant for `viewType = .Map`
 
 #### viewType
 The `viewType` parameter defines in which format the data should be returned. Data can be returned in two formats aimed for different purposes.
