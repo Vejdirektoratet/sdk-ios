@@ -25,7 +25,6 @@ class EntityViewController: UIViewController {
                     let listModel = entity as! ListEntity
                     self.headingLabel.text = listModel.heading
                     self.descriptionTextView.text = listModel.description
-                    debugPrint(entity.tag)
                 case .error(let error):
                     self.headingLabel.text = "Error"
                     self.descriptionTextView.text = "\(error)"
